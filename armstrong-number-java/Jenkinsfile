@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            steps {
+                dir('armstrong-number-java') {
+                    sh './gradlew assembleDist'
+                } 
+            }
+        }
+    }
+
+    post {
+        success {
+            archiveArtifacts artifacts: 'armstrong-number-java/app/build/distributions/*.tar, armstrong-number-java/app/build/distributions/*.zip', followSymlinks: false
+        }
+    }
+}
