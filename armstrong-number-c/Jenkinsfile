@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            steps {
+                dir('armstrong-number-c') {
+                    sh 'make'
+                } 
+            }
+        }
+    }
+
+    post {
+        success {
+            archiveArtifacts artifacts: 'armstrong-number-c/is_armstrong_number', followSymlinks: false
+        }
+    }
+}
