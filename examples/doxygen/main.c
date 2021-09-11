@@ -1,8 +1,9 @@
 /**
- * \file
+ *  @file main.c
  *
  *  Programa que comprueba si un número es un número de Armstrong.
  */
+
 # include <stdio.h>
 # include "salute.h"
 

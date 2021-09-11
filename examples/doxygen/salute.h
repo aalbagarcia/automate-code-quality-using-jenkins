@@ -1,11 +1,12 @@
 /**
- * \file
+ * @file
  *
  * Módulo para gestionar los saludos
  */
 
 #ifndef SALUTE_H
 #define SALUTE_H
+
 /**
  * Devuelve un saludo con un tono informal
  */ 
