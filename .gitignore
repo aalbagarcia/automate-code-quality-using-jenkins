@@ -17,3 +17,7 @@
 armstrong-number-c/armstrong-number-c
 examples/**/doc/
 examples/**/build/
+
+*.class
+
+reports/
