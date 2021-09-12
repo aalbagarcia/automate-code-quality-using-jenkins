@@ -20,7 +20,8 @@ pipeline {
 
     post {
         always {
-            publishCppcheck ignoreBlankFiles: true, pattern: 'armstrong-number-c/reports/cppcheck/report.xml'
+            //publishCppcheck ignoreBlankFiles: true, pattern: 'armstrong-number-c/reports/cppcheck/report.xml'
+              recordIssues enabledForFailure: true, tool: cppCheck(pattern: 'armstrong-number-c/reports/cppcheck/*.xml')
         }
         success {
             archiveArtifacts artifacts: 'armstrong-number-c/is_armstrong_number', followSymlinks: false
